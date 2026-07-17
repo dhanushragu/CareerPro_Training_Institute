@@ -1,0 +1,449 @@
+/* =====================================================
+   ANIMATIONS
+   CareerPro Institute Website
+   ===================================================== */
+
+
+/* ================= LOADER ANIMATION ================= */
+
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+
+
+/* ================= SCROLL REVEAL ================= */
+
+
+.reveal{
+
+    opacity:1;
+
+    transform:none;
+
+    transition:0.8s ease;
+
+}
+
+
+
+.reveal.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+
+
+/* ================= SLIDE ANIMATIONS ================= */
+
+
+.slide-left{
+
+    animation:slideLeft .8s ease forwards;
+
+}
+
+
+
+.slide-right{
+
+    animation:slideRight .8s ease forwards;
+
+}
+
+
+
+@keyframes slideLeft{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+
+}
+
+
+
+@keyframes slideRight{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+
+}
+
+
+
+
+
+
+/* ================= ZOOM EFFECT ================= */
+
+
+.zoom-in{
+
+    animation:zoomIn .8s ease forwards;
+
+}
+
+
+
+@keyframes zoomIn{
+
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+
+}
+
+
+
+
+
+/* ================= HERO FLOATING SHAPES ================= */
+
+
+.hero-shape{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    opacity:.15;
+
+    z-index:-1;
+
+}
+
+
+
+.shape-one{
+
+    width:180px;
+
+    height:180px;
+
+    background:var(--primary);
+
+    top:100px;
+
+    right:80px;
+
+    animation:float 5s infinite ease-in-out;
+
+}
+
+
+
+.shape-two{
+
+    width:120px;
+
+    height:120px;
+
+    background:var(--accent);
+
+    bottom:80px;
+
+    left:100px;
+
+    animation:float 6s infinite ease-in-out;
+
+}
+
+
+
+@keyframes float{
+
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-25px);
+
+    }
+
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+
+/* ================= CARD HOVER EFFECT ================= */
+
+
+.course-card,
+.feature-card,
+.trainer-card{
+
+    transition:.35s ease;
+
+}
+
+
+
+.course-card:hover,
+.feature-card:hover,
+.trainer-card:hover{
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.12);
+
+}
+
+
+
+
+
+/* ================= BUTTON EFFECT ================= */
+
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.btn::after{
+
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    background:rgba(255,255,255,.3);
+
+    border-radius:50%;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    transition:.5s;
+
+
+}
+
+
+
+.btn:hover::after{
+
+
+    width:250px;
+
+    height:250px;
+
+
+}
+
+
+
+
+
+/* ================= IMAGE HOVER ================= */
+
+
+.hero-image img,
+.about-image img,
+.trainer-card img{
+
+
+    transition:.5s ease;
+
+
+}
+
+
+
+.hero-image img:hover,
+.about-image img:hover{
+
+
+    transform:scale(1.03);
+
+
+}
+
+
+
+
+
+
+/* ================= NAVBAR ANIMATION ================= */
+
+
+.header.scrolled{
+
+    animation:navDown .4s ease;
+
+}
+
+
+
+@keyframes navDown{
+
+
+    from{
+
+        transform:translateY(-100%);
+
+    }
+
+
+    to{
+
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+
+/* ================= TESTIMONIAL FADE ================= */
+
+
+.testimonial-slide{
+
+    animation:fadeSlide .5s ease;
+
+}
+
+
+
+@keyframes fadeSlide{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+
+}
+
+
+
+
+/* ================= ACCESSIBILITY ================= */
+
+
+@media(prefers-reduced-motion:reduce){
+
+
+*{
+
+    animation:none!important;
+
+    transition:none!important;
+
+}
+
+
+}
